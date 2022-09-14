@@ -100,13 +100,51 @@ public class CoffeeMaker {
     // Will add on the quantity with the existing amount of respective ingredients.
     // And display the respective amount at last.
     public static void Refill_Ingredients(){
+
+        int water, milk, ginger, sugar, tea_leaves, green_mixture;
         System.out.println("Enter the Quantity to be added");
-        System.out.print("Water : "); Ingredients.Total_Water += in.nextInt();
-        System.out.print("Milk : "); Ingredients.Total_Milk += in.nextInt();
-        System.out.print("Ginger syrup : "); Ingredients.Total_GingerSyrup += in.nextInt();
-        System.out.print("Sugar syrup : "); Ingredients.Total_SugarSyrup += in.nextInt();
-        System.out.print("Tea-leaves syrup : "); Ingredients.Total_TeaLeavesSyrup += in.nextInt();
-        System.out.print("Green mixture : "); Ingredients.Total_GreenMixture += in.nextInt();
+
+        System.out.print("Water : "); water = in.nextInt();
+        while(water<0){
+            System.out.println("Enter valid option");
+            water = in.nextInt();
+        }
+        Ingredients.Total_Water += water;
+
+        System.out.print("Milk : "); milk = in.nextInt();
+        while(milk<0){
+            System.out.println("Enter valid option");
+            milk = in.nextInt();
+        }
+        Ingredients.Total_Milk += milk;
+
+        System.out.print("Ginger syrup : "); ginger = in.nextInt();
+        while(ginger<0){
+            System.out.println("Enter valid option");
+            ginger = in.nextInt();
+        }
+        Ingredients.Total_GingerSyrup += ginger;
+
+        System.out.print("Sugar syrup : "); sugar = in.nextInt();
+        while(sugar<0){
+            System.out.println("Enter valid option");
+            sugar = in.nextInt();
+        }
+        Ingredients.Total_SugarSyrup += sugar;
+
+        System.out.print("Tea-leaves syrup : "); tea_leaves = in.nextInt();
+        while(tea_leaves<0){
+            System.out.println("Enter valid option");
+            tea_leaves = in.nextInt();
+        }
+        Ingredients.Total_TeaLeavesSyrup += tea_leaves;
+
+        System.out.print("Green Mixture : "); green_mixture = in.nextInt();
+        while(green_mixture<0){
+            System.out.println("Enter valid option");
+            green_mixture = in.nextInt();
+        }
+        Ingredients.Total_GreenMixture += green_mixture;
 
         LeftIngredients();
 
